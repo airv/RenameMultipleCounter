@@ -16,6 +16,7 @@ if __name__ == "__main__":
             filepath = os.path.join(root, filename)
             name, extension = os.path.splitext(filename)
             new_file = os.path.join(root, str(counter) + extension)
+            # try to find a counter does not exist
             while os.path.exists(new_file) is True:
                 new_file = os.path.join(root, str(counter) + extension)
                 counter += 1
